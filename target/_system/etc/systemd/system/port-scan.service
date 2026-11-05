@@ -1,0 +1,13 @@
+[Unit]
+Description=Port Scan Detection Lab Target
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+ExecStart=/usr/bin/python3 /usr/local/bin/target_server.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
